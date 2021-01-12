@@ -10,7 +10,7 @@ function App() {
   const [genderSort, setGenderSort] = useState("")
   const [payMethod, setPayMethod] = useState("")
 
-  const [filteredNames, setFilteredNames] = useState([])
+  const [filteredNames, setFilteredNames] = useState(profiles)
   const [ isLoading, setIsLoading ] = useState(true);
 
 

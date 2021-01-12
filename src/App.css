@@ -1,38 +1,119 @@
 .App {
+  /* overflow-x: hidden; */
+  
+}
+.header {
+  text-transform: uppercase;
+  box-shadow: 0px 2px 4px 0px rgba(70, 70, 70, 0.1);
+  background-color: #fff;
+  width: 100%;
+  font-weight: bold;
+}
+.header-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header a {
+  text-decoration: none;
+  color: #0045e2;
+  margin: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.header a:hover {
+  color: #0025f2;
+  font-size: 1.8rrm;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* DATA SEARCH STYLES */
+.search-div {
+  margin: 1.5rem auto;
+  overflow: hidden;
+  max-width: 24rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  appearance: none;
+  background-color: transparent;
+  border-style: none;
+  width: 100%;
+  color: #4a5568;
+  margin: 0 1rem;
+  border: solid 2px #b2f5ea;
+  border-top-width: 0px;
+  padding: 0.25rem 0.5rem;
+}
+.search-bar:focus {
+  outline: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* FILTER STYLE SECTION */
+.filter {
+  margin: 1rem 2rem;
+  /* width: 100%; */
+}
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #c0c0c0;
+  max-width: 24rem;
+}
+.filter-section div {
+  flex: 1;
+}
+
+/* REACT TABLE STYLE SECTION */
+.table-wrapper {
+  margin: 2rem ;
+  padding: 1rem;
+
+  background: #FFFFFF;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+.react-bootstrap-table table {  
+  table-layout: fixed;
+  display: block;
+}
+
+
+.react-bootstrap-table > .table > thead > tr > th,
+.react-bootstrap-table > .table > tbody > tr > th,
+.react-bootstrap-table > .table > tfoot > tr > th,
+.react-bootstrap-table > .table > thead > tr > td,
+.react-bootstrap-table > .table > tbody > tr > td,
+.react-bootstrap-table > .table > tfoot > tr > td {
+  white-space: nowrap;
+}
+
+/* loader styles section */
+.loader-div {
+  display: grid;
+  place-items: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 3px solid #3f51b5;
+  border-top: 4px solid#b2f5ea;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      transform: rotate(360deg);
   }
 }
